@@ -13,10 +13,11 @@ export default function ClientInsightsPage() {
       <p className="eyebrow">Client Insights</p>
       <h1 className="mt-4">Read the room faster.</h1>
       <p className="mt-6 text-lg text-burnt leading-relaxed max-w-readable">
-        Enter a client's birthday. You'll get a one-screen summary of how they
-        tend to show up at the chair, what to talk about, what to skip, and
-        roughly when they'll want to come back. It's a framework, not a
-        forecast — use it as a starting place, never as a verdict.
+        Birthday alone gives you the Sun. Add time of birth and the city
+        they were born in and you'll get the full <em>holy trinity</em> —
+        Rising (how they walk in), Sun (what they want to express), and Moon
+        (what they actually need). It's a framework, not a forecast — use it
+        as a starting place, never as a verdict.
       </p>
 
       <div className="mt-12">

@@ -16,6 +16,7 @@
 
 export type Element = "Fire" | "Earth" | "Air" | "Water";
 export type Modality = "Cardinal" | "Fixed" | "Mutable";
+export type Polarity = "Masculine" | "Feminine";
 
 export interface SignProfile {
   name: string;
@@ -23,6 +24,7 @@ export interface SignProfile {
   dateRange: string;
   element: Element;
   modality: Modality;
+  polarity: Polarity; // Fire/Air = Masculine (yang, projective); Earth/Water = Feminine (yin, receptive)
   rulingPlanet: string;
   vibe: string;
   conversationStarters: string[];
@@ -38,6 +40,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Mar 21 – Apr 19",
     element: "Fire",
     modality: "Cardinal",
+    polarity: "Masculine",
     rulingPlanet: "Mars",
     vibe: "Walks in already mid-sentence. Wants the appointment to move.",
     conversationStarters: [
@@ -62,6 +65,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Apr 20 – May 20",
     element: "Earth",
     modality: "Fixed",
+    polarity: "Feminine",
     rulingPlanet: "Venus",
     vibe: "Comes in already loyal. Will keep coming back for a decade if the chair feels good.",
     conversationStarters: [
@@ -86,6 +90,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "May 21 – Jun 20",
     element: "Air",
     modality: "Mutable",
+    polarity: "Masculine",
     rulingPlanet: "Mercury",
     vibe: "Has six stories before they even sit down. Loves the conversation as much as the cut.",
     conversationStarters: [
@@ -110,6 +115,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Jun 21 – Jul 22",
     element: "Water",
     modality: "Cardinal",
+    polarity: "Feminine",
     rulingPlanet: "Moon",
     vibe: "The chair is half hair appointment, half therapy. Treat it as both.",
     conversationStarters: [
@@ -134,6 +140,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Jul 23 – Aug 22",
     element: "Fire",
     modality: "Fixed",
+    polarity: "Masculine",
     rulingPlanet: "Sun",
     vibe: "Wants the appointment to feel like an event. Will refer their entire friend group if it does.",
     conversationStarters: [
@@ -158,6 +165,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Aug 23 – Sep 22",
     element: "Earth",
     modality: "Mutable",
+    polarity: "Feminine",
     rulingPlanet: "Mercury",
     vibe: "Has a Pinterest board with notes. Will notice if your station is messy.",
     conversationStarters: [
@@ -182,6 +190,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Sep 23 – Oct 22",
     element: "Air",
     modality: "Cardinal",
+    polarity: "Masculine",
     rulingPlanet: "Venus",
     vibe: "Wants the room to feel beautiful and the decision to feel collaborative.",
     conversationStarters: [
@@ -206,6 +215,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Oct 23 – Nov 21",
     element: "Water",
     modality: "Fixed",
+    polarity: "Feminine",
     rulingPlanet: "Pluto (trad. Mars)",
     vibe: "Quiet at first. Once they trust you, they will tell you everything.",
     conversationStarters: [
@@ -230,6 +240,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Nov 22 – Dec 21",
     element: "Fire",
     modality: "Mutable",
+    polarity: "Masculine",
     rulingPlanet: "Jupiter",
     vibe: "Half their stories are from another country. Loves a stylist who can keep up.",
     conversationStarters: [
@@ -254,6 +265,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Dec 22 – Jan 19",
     element: "Earth",
     modality: "Cardinal",
+    polarity: "Feminine",
     rulingPlanet: "Saturn",
     vibe: "Books in advance. Pays without drama. Wants you to be excellent and respectful of their time.",
     conversationStarters: [
@@ -278,6 +290,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Jan 20 – Feb 18",
     element: "Air",
     modality: "Fixed",
+    polarity: "Masculine",
     rulingPlanet: "Uranus (trad. Saturn)",
     vibe: "Wants to feel like they're not like other clients. Often, they aren't.",
     conversationStarters: [
@@ -302,6 +315,7 @@ export const SIGNS: SignProfile[] = [
     dateRange: "Feb 19 – Mar 20",
     element: "Water",
     modality: "Mutable",
+    polarity: "Feminine",
     rulingPlanet: "Neptune (trad. Jupiter)",
     vibe: "Comes in a bit dreamy, leaves feeling like they had a spa day.",
     conversationStarters: [
