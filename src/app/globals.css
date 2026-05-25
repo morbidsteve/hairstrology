@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+
+  body {
+    @apply bg-pearl text-ink font-sans;
+    font-feature-settings: "ss01", "kern", "liga";
+  }
+
+  /* Editorial headings — serif, tight tracking, generous leading. */
+  h1, h2, h3, h4 {
+    @apply font-serif text-ink tracking-tightest;
+    font-feature-settings: "ss01", "dlig", "kern";
+  }
+
+  h1 { @apply text-5xl md:text-6xl leading-[1.05]; }
+  h2 { @apply text-3xl md:text-4xl leading-[1.1]; }
+  h3 { @apply text-2xl leading-snug; }
+  h4 { @apply text-xl leading-snug; }
+
+  p { @apply leading-relaxed; }
+
+  a {
+    @apply underline decoration-clay/40 underline-offset-4 transition-colors;
+  }
+
+  a:hover {
+    @apply decoration-ink;
+  }
+
+  ::selection {
+    background-color: #1c1d24;
+    color: #f8f5ef;
+  }
+
+  /* Soft hairline rule used throughout. */
+  hr {
+    @apply border-0 border-t border-clay/25;
+  }
+}
+
+@layer components {
+  .hairline { @apply border-t border-clay/25; }
+
+  /* Editorial label/eyebrow above section titles. */
+  .eyebrow {
+    @apply font-sans text-xs uppercase tracking-[0.18em] text-burnt;
+  }
+
+  /* The serif display utility used in hero copy. */
+  .display {
+    @apply font-serif tracking-tightest leading-[1.02];
+  }
+
+  /* Buttons — quiet, editorial. */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 px-5 py-3 text-sm
+      font-medium transition-colors no-underline;
+  }
+
+  .btn-primary {
+    @apply btn bg-ink text-pearl hover:bg-midnight;
+  }
+
+  .btn-secondary {
+    @apply btn border border-ink text-ink hover:bg-ink hover:text-pearl;
+  }
+
+  .btn-ghost {
+    @apply btn text-ink hover:text-accent;
+  }
+
+  /* Input + form primitives. */
+  .field {
+    @apply w-full bg-transparent border-0 border-b border-clay/40 px-0 py-3
+      font-sans text-base text-ink placeholder:text-clay/70
+      focus:outline-none focus:border-ink transition-colors;
+  }
+
+  .field-label {
+    @apply block text-xs uppercase tracking-[0.16em] text-burnt mb-2;
+  }
+}
+
+/* Marquee — silent, used only when the user adds it. */
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.fade-in {
+  animation: fade-in 0.5s ease-out both;
+}

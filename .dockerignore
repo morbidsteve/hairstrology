@@ -1,0 +1,16 @@
+node_modules
+.next
+.git
+.gitignore
+Dockerfile
+docker-compose.yml
+README.md
+CLAUDE.md
+SETUP.md
+.env*
+!.env.example
+data
+*.db
+.vscode
+.idea
+.DS_Store

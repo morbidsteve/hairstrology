@@ -1,0 +1,22 @@
+// Hairstrology — Prisma schema (SQLite for the prototype).
+// To switch to Postgres later, change `provider` + `DATABASE_URL`.
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model WaitlistEntry {
+  id         String   @id @default(cuid())
+  email      String   @unique
+  name       String?
+  role       String?  // "stylist", "salon owner", "student", "other"
+  yearsBehindChair Int?
+  zip        String?
+  source     String?  // utm/source if we want to track it later
+  createdAt  DateTime @default(now())
+}
